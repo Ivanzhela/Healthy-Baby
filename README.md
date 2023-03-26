@@ -25,7 +25,7 @@
 * Save, rate and comment on recipes.
 * Can become a creator.
 
-**Creator** - logged-in user, who has become a creator through the “Become a Creator” functionality and has a “creator name”
+**Creator** - logged-in user, who has become a creator
 * Read all recipes on the site and their details.
 * Read all users' profiles and their own recipes.
 * Read recipes they saved.
