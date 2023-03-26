@@ -34,9 +34,11 @@
 * Edit and delete recipes. (only recipes they created)
 
 ## :hammer: Built With **MERN**
-**Client
+
+**Client**
 * React JS
-**Server
+
+**Server**
 * Node.js
 * Express.js
 * MongoDB - Mongoose
