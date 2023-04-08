@@ -13,17 +13,19 @@
 
 ## :pencil2: Overview
 
-**Healthy Baby** is a website for recipes. Recipes can be created, read, edited and deleted. Comments may be added to recipes, too. Also, users can save recipes and rate them. 
+**Healthy Baby** is a website for recipes. Recipes can be created, read, edited and deleted. Comments may be added to recipes, too. Also, users can save, unsave recipes and rate them. They can choose whether they want to have a video or just an image when creating a recipe.
+
 * All guests and users have access to see all recipes and their details.
 * All users and guests can search recipes by name, ingredients or by match in preparation.
 * All users and guests can see users' profiles and their recipes.
 * All users and guests can sort recipes.
-* All users will have notifications of activity on their recipes.
+* All users can create recipes.
 * All users can edit their profiles.
 * All users can comment on recipes as many times as they want.
 * All users except the creator can save and unsave a recipe.
 * All users except the creator can rate a recipe but only once.
-* All authorized users can see their saved recipes.
+* All creators will have notifications of activity on their recipes.
+* All creators can see their saved recipes.
 
 ## :performing_arts: User Types
 
@@ -32,13 +34,12 @@
 * Read all users' profiles and their own recipes.
 
 **User** - logged-in user, who is not a creator
-* Read their notifications.
+* Can become a creator.
 * Read all recipes on the site and their details.
 * Read all users' profiles and their own recipes.
 * Save, unsave, rate and comment on recipes.
 * Еdit or delete their comments.
 * Edit their profile.
-* Can become a creator.
 
 **Creator** - logged-in user, who has become a creator
 * Read their notifications.
