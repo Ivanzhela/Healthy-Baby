@@ -2,6 +2,15 @@
 
 **Healthy Baby** is my defense project for **ReactJS** course at [SoftUni](https://softuni.bg/ "SoftUni") (April 2023).
 
+## Start the app
+
+**Deployment**
+[Healthy Baby](https://healthy-baby-recipes.web.app/)
+
+**Local**
+* client - npm start
+* server - npm start
+
 ## :pencil2: Overview
 
 **Healthy Baby** is a website for recipes. Recipes can be created, read, edited and deleted. Comments may be added to recipes, too. Also, users can save recipes and rate them. 
