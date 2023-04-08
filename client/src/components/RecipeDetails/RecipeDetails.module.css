@@ -1,0 +1,100 @@
+.details {
+    width: 100%;
+    margin: 0% auto;
+}
+
+.recipe-data .recipe-name {
+    margin: 10px;
+    border-bottom: 2px solid white;
+    display: flex;
+    font-size: x-large;
+}
+
+.stars {
+    font-size: larger;
+    text-align: center;
+    margin: 15px 0 0 10px;
+    display: flex;
+}
+
+.stars img {
+    width: 25px;
+    height: 25px;
+}
+
+.details-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-top {
+    display: flex;
+}
+
+.details-recipe {
+    padding-left: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.details-recipe div h3 {
+    font-size: 40px;
+    margin: 30px 0 5px 0;
+}
+
+.details-recipe div {
+    padding-bottom: 30px;
+}
+
+.ingredients {
+    margin: 0px 0 0 50px;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.ingredients ul {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.ingredients ul li::before {
+    content: "\2022";
+    color: #86e0aa;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin: 10px 0;
+}
+
+.direction  {
+    min-height: 400px;
+}
+
+.direction div {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 40px 30px 0 0;
+    word-break: break-all;
+}
+
+.direction div p {
+    padding-top: 10px;
+    font-weight: normal;
+}

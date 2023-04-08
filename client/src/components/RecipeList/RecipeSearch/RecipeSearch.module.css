@@ -1,0 +1,57 @@
+.search-bar {
+    width: 100%;
+    min-height: 100px;
+    margin: 50px 30px 15px 30px;
+  }
+  .search {
+    min-height: 40px;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    max-width:500px;
+    position: absolute;
+    right: 55px;
+  }
+  
+  .search-bar .search button {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #a2e4bcfe;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    position: absolute;
+    right: 55px;
+  
+  }
+
+  .search-bar p{
+    font-family: "Indie Flower", cursive;
+
+  }
+  
+  .sorting-items {
+    font-size: 17px;
+    display: flex;
+    text-align: center;
+    padding-top: 30px;
+    position: absolute;
+    right: 55px;
+  }
+  
+  .sorting-items button {
+    font-size: 17px;
+    text-decoration: underline;
+    background-color: inherit;
+    border: none;
+    margin-left: 20px;
+  }

@@ -1,0 +1,55 @@
+.welcome {
+    display: flex;
+    justify-content: flex-start;
+    height: 500px;
+    margin-top: 4.95%;
+    width: 100%;
+    background-color: #b7e9cbd2;
+}
+
+.welcome-text {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: fixed;
+    right: 150px;
+    top: 300px;
+}
+
+.welcome-text h1 {
+    font-size: 50px;
+    margin: 0px;
+    color: black;
+    font-weight: 100;
+}
+
+.welcome-text p {
+    color: black;
+    text-align: end;
+    width: 460px;
+}
+
+.welcome-text a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+h1.bold-welcome {
+    font-weight: 900;
+    font-size: 80px;
+    font-family: "Indie Flower", cursive;
+}
+
+.welcome-image {
+    width: 1000px;
+    position: relative;
+    top: 5px;
+}
+
+.welcome-image img {
+    width: 100%;
+}

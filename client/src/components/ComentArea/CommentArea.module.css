@@ -1,0 +1,62 @@
+.users-container {
+    width: 400px;
+    min-height: 200px;
+    border: 25px solid white;
+    padding: 15px 15px 0px 15px;
+}
+
+.users-container a {
+    color: initial;
+}
+
+.creator-details {
+    text-align: center;
+    margin: 10px 0 50px 0;
+}
+
+.comment-textarea {
+    resize: none;
+    overflow: hidden;
+    height: 100px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #262626;
+    padding: 10px;
+    display: flex;
+    word-break: break-all;
+    white-space: normal;
+    color: rgb(70, 65, 65);
+
+}
+
+textarea.text::placeholder {
+    color: #777;
+}
+
+.add-comments {
+    display: block;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding: 10px 0 0 0;
+}
+
+.add-comments button {
+    color: #86d4a5d2;
+    background-color: white;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.add-comments form label {
+    display: none;
+}
+
+.add-comments form {
+    display: flex;
+    margin-bottom: 15px;
+}

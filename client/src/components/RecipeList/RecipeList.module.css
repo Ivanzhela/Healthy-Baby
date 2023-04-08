@@ -1,0 +1,17 @@
+.recipe-data {
+  width: 100%;
+  margin-bottom: -20px;
+  padding-left: 2%;
+}
+
+.not-available-recipes {
+  text-align: center;
+  font-size: 24px;
+  margin: 100px;
+  background-color: #8ed1b1d2;
+}
+
+.not-available-recipes h1 {
+  border: 1px solid rgba(0, 0, 0, 0.468);
+  padding: 30px;
+}

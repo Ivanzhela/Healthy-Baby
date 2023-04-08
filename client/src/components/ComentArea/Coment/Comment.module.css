@@ -1,0 +1,49 @@
+.comments {
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 12px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-data {
+  padding: 10px;
+  display: flex;
+  font-size: 10px;
+  word-break: break-all;
+  white-space: normal;
+  font-weight: bold;
+  color: rgb(70, 65, 65);
+}
+
+.comment-data h3 {
+  margin-top: 5px;
+}
+
+.comment-data p {
+  margin-top: 4px;
+  font-size: 13px;
+  word-wrap: break-word;
+  white-space: normal;
+  font-weight: lighter;
+}
+
+.edit-delete-tbns {
+  max-width: 70px;
+  height: 30px;
+  margin: 12px 5px;
+}
+
+.edit-delete-tbns button {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  background-color: rgba(128, 222, 185, 0.638);
+  border-radius: 5px;
+  border: none;
+}
+
+.edit-delete-tbns button img {
+  width: 20px;
+  height: 20px;
+}

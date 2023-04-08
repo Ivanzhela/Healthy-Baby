@@ -1,0 +1,17 @@
+.cook-item {
+    flex-direction: column;
+    font-size: large;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.cook-item div img {
+    margin: 0;
+    height: 40px;
+    width: 50px;
+}
+
+.cook-item span {
+    font-family: "Indie Flower", cursive;
+    font-weight: 500;
+}

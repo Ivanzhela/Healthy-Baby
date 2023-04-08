@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main .container {
+    position:relative;
+    margin-top: 5%;
+    width: 74%;
+}
+
+button {
+    cursor: pointer;
+}
