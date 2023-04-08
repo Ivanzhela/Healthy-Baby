@@ -31,6 +31,11 @@ export const RecipeList = ({ isProfile }) => {
         setQuery(value);
     };
 
+    const onRecipeOptionHandler = (e, value) => {
+        e.preventDefault();
+        setSaves(value);
+    };
+
     const criteriaHandler = (e, criteria) => {
         e.preventDefault();
 
@@ -41,11 +46,6 @@ export const RecipeList = ({ isProfile }) => {
             result = recipe.slice().sort((a, b) => b.comments.length - a.comments.length);
         }
         setRecipe(result);
-    };
-
-    const onRecipeOptionHandler = (e, value) => {
-        e.preventDefault();
-        setSaves(value);
     };
 
     return (

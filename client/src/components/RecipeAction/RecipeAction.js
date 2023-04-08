@@ -119,7 +119,7 @@ export const RecipeAction = ({ isEdit }) => {
                             title={'Video'}
                             type={'text'}
                             name={'video'}
-                            placeholder={'https://youtube.com/...'}
+                            placeholder={'https://www.youtube.com/...'}
                             value={formValues.video}
                             handler={onChangeHandler}
                             error={errors}

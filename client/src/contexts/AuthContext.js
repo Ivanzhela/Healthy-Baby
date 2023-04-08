@@ -18,15 +18,13 @@ export const AuthProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        
+
         if (Object.entries(user).length !== 0) {
             getNotifications(user._id)
                 .then(n =>
                     setUserNotifications(n)
                 );
-        } else {
-            setUserNotifications([]);
-        }
+        };
     }, [user]);
 
     return (

@@ -39,8 +39,8 @@ export const errorHandler = (submitValues) => {
     if (submitValues.image?.length < 1 && (!submitValues.image?.startsWith('https://') || !submitValues.image?.startsWith('http://'))) {
         errors.image = 'Image should starts with http:// or https:// !'
     };
-    if (submitValues.video?.length > 0 && !submitValues.video?.startsWith('http://youtube.com/')) {
-        errors.video = 'Video should starts with http://youtube.com/ !'
+    if (submitValues.video?.length > 0 && !submitValues.video?.startsWith('https://www.youtube.com/')) {
+        errors.video = 'Video should starts with https://www.youtube.com/ !'
     };
 
     return errors;
