@@ -10,6 +10,7 @@
 * All users and guests can see users' profiles and their recipes.
 * All users and guests can sort recipes.
 * All users will have notifications of activity on their recipes.
+* All users can edit their profiles.
 * All users can comment on recipes as many times as they want.
 * All users except the creator can save and unsave a recipe.
 * All users except the creator can rate a recipe but only once.
@@ -27,6 +28,7 @@
 * Read all users' profiles and their own recipes.
 * Save, unsave, rate and comment on recipes.
 * Еdit or delete their comments.
+* Edit their profile.
 * Can become a creator.
 
 **Creator** - logged-in user, who has become a creator
@@ -37,6 +39,7 @@
 * Save, unsave and rate recipes. (only recipes they didn`t created)
 * Comment on recipes.
 * Еdit or delete their comments.
+* Edit their profile.
 * Delete comments of other users. (only on recipes they created)
 * Edit and delete recipes. (only recipes they created)
 
