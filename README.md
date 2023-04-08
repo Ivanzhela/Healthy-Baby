@@ -5,7 +5,7 @@
 ## Start the app
 
 **Deployment**
-[Healthy Baby](https://healthy-baby-recipes.web.app/)
+* [Healthy Baby](https://healthy-baby-recipes.web.app/)
 
 **Local**
 * client - npm start
