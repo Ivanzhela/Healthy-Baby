@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from './RecipeSearch.module.css';
 
-export const RecipeSearch = ( { criteriaHandler, searchParamsHandler} ) => {
+export const RecipeSearch = ( { onCriteriaHandler, onSearchParamsHandler} ) => {
 
     const [ searchParams, setSearchParams ] = useState("");
 
@@ -14,16 +14,16 @@ export const RecipeSearch = ( { criteriaHandler, searchParamsHandler} ) => {
     return (
         <div className={style["search-bar"]}>
             <div className={style.search}>
-                <form method="post" onSubmit={(e) => searchParamsHandler(e, searchParams)}>
+                <form method="post" onSubmit={(e) => onSearchParamsHandler(e, searchParams)}>
                     <input type="text" placeholder="Search by name, ingredients or preparation match..." name="search" value={searchParams} onChange={searchValueHandler}/>
-                    <button type="submit" data-testId={'search'}><i className="fa fa-search"></i></button>
+                    <button type="submit"><i className="fa fa-search"></i></button>
                 </form>
             </div>
 
             <div className={style["sorting-items"]}>
                 <p>Sort by: </p>
-                <button onClick={(e) => criteriaHandler(e, "rated")}>Rated</button>
-                <button onClick={(e) => criteriaHandler(e, "commented")}>Commented</button>
+                <button onClick={(e) => onCriteriaHandler(e, "rated")}>Rated</button>
+                <button onClick={(e) => onCriteriaHandler(e, "commented")}>Commented</button>
             </div>
         </div>
     );

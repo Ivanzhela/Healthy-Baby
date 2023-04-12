@@ -40,7 +40,6 @@ export const useForm = (initialValues, action, params, nav, isAuth) => {
 
             } catch (err) {
                 setError(err);
-                setError({});
             };
         };
     };

@@ -18,6 +18,9 @@
     position: absolute;
     right: 55px;
   }
+  .search-bar input::placeholder {
+    font-size: 16px;
+  }
   
   .search-bar .search button {
     float: left;

@@ -4,11 +4,12 @@ export const errorHandler = (submitValues) => {
     if (!submitValues) {
         return;
     }
-    if (submitValues.username?.length < 2) {
-        errors.username = 'Username must be at least 2 characters long!'
+
+    if (submitValues.username?.length < 2 || submitValues.username?.length > 10) {
+        errors.username = 'Username must be between 2-10 characters long!'
     };
-    if (submitValues.email?.length < 8) {
-        errors.email = 'Email must be at least 8 characters long!'
+    if (submitValues.email?.length < 8 || submitValues.email?.match(/.+@.+\..+/, 'i') === null) {
+        errors.email = 'Email must be at least 8 characters long in a valid format!'
     };
     if (submitValues.password?.length < 4) {
         errors.password = 'Password must be at least 4 characters long!'

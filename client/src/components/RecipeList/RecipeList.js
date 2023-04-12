@@ -25,7 +25,7 @@ export const RecipeList = ({ isProfile }) => {
 
     }, [userId, isProfile, query, saves]);
 
-    const searchParamsHandler = (e, value) => {
+    const onSearchParamsHandler = (e, value) => {
         e.preventDefault();
 
         setQuery(value);
@@ -36,7 +36,7 @@ export const RecipeList = ({ isProfile }) => {
         setSaves(value);
     };
 
-    const criteriaHandler = (e, criteria) => {
+    const onCriteriaHandler = (e, criteria) => {
         e.preventDefault();
 
         let result = "";
@@ -58,7 +58,7 @@ export const RecipeList = ({ isProfile }) => {
 
                     <div className="container">
 
-                        <RecipeSearch criteriaHandler={criteriaHandler} searchParamsHandler={searchParamsHandler} />
+                        <RecipeSearch onCriteriaHandler={onCriteriaHandler} onSearchParamsHandler={onSearchParamsHandler} />
 
                         <div className={style["recipe-data"]}>
                             {recipe.length > 0 ?
