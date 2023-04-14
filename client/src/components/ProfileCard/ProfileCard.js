@@ -28,7 +28,7 @@ export const ProfileCard = ({ userId, onRecipeOptionHandler }) => {
                 </div>
             }
             <div className={style["profile_img"]}>
-                <img src="/images/logo.png" alt="profileImage" />
+                <img src={userProfile.profilePic || "/images/person.png"} alt="profilePic" />
             </div>
 
             <div className={style.personal}>

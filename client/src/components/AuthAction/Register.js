@@ -9,7 +9,8 @@ export const Register = () => {
         username: '',
         email: '',
         password: '',
-        rePass: ''
+        rePass: '',
+        profilePic: ''
     }, 'register', {}, '/catalog', true);
 
     return (
@@ -51,6 +52,15 @@ export const Register = () => {
                         name={'rePass'}
                         placeholder={'Repeat Password'}
                         value={formValues.rePass}
+                        handler={onChangeHandler}
+                        error={errors}
+                    />
+                    <Input
+                        title={'Profile pic'}
+                        type={'text'}
+                        name={'profilePic'}
+                        placeholder={'https://...'}
+                        value={formValues.profilePic}
                         handler={onChangeHandler}
                         error={errors}
                     />

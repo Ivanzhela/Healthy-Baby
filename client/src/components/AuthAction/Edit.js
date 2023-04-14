@@ -13,7 +13,8 @@ export const Edit = () => {
         username: '',
         email: '',
         password: '',
-        rePass: ''
+        rePass: '',
+        profilePic: ''
 
     }, 'editUser', userId, `/login`, true);
 
@@ -67,6 +68,15 @@ export const Edit = () => {
                         name={'rePass'}
                         placeholder={'Repeat Password'}
                         value={formValues.rePass}
+                        handler={onChangeHandler}
+                        error={errors}
+                    />
+                    <Input
+                        title={'Profile pic'}
+                        type={'text'}
+                        name={'profilePic'}
+                        placeholder={'https://...'}
+                        value={formValues.profilePic}
                         handler={onChangeHandler}
                         error={errors}
                     />

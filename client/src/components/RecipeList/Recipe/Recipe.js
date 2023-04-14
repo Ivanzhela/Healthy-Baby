@@ -29,7 +29,7 @@ export const Recipe = ({ paginationRecipe }) => {
             <div className={style["user-details"]}>
                 <Link to={`/profile/${paginationRecipe.owner?._id}`}>
                     <div>
-                        <Profilepic />
+                        <Profilepic image={paginationRecipe.owner.profilePic}/>
                     </div>
                     <h3>{paginationRecipe.owner?.username}</h3>
                 </Link>
