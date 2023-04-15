@@ -41,7 +41,7 @@ export const errorHandler = (submitValues) => {
     if (submitValues.preparation?.length < 1) {
         errors.preparation = 'Preparation is required!';
     };
-    if (submitValues.image?.length < 1 && (!submitValues.image?.startsWith('https://') && !submitValues.image?.startsWith('http://'))) {
+    if (submitValues.image?.length < 1 || (submitValues.image?.length > 0 && !submitValues.image?.startsWith('https://') && !submitValues.image?.startsWith('http://'))) {
         errors.image = 'Image should starts with http:// or https:// !';
     };
     if (submitValues.video?.length > 0 && !submitValues.video?.startsWith('https://www.youtube.com/')) {
