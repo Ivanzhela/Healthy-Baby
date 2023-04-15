@@ -19,7 +19,7 @@ export const RecipeList = ({ isProfile }) => {
 
     useEffect(() => {
         let queryString = `?user=${userId}&search=${query}&saves=${saves}`;
-
+        console.log(recipe);
         getAllRecipes(queryString)
             .then(result => {
                 setRecipe(result)
@@ -28,16 +28,16 @@ export const RecipeList = ({ isProfile }) => {
     }, [userId, isProfile, query, saves]);
 
     useEffect(() => {
-        const recipeOnPage = recipe?.slice(0, 2);
+        const recipeOnPage = recipe?.slice(0, 10);
         setPaginationRecipe(recipeOnPage);
     }, [recipe]);
 
-    const searchParamsHandler = (e, value) => {
+    const onSearchParamsHandler = (e, value) => {
         e.preventDefault();
         setQuery(value);
     };
 
-    const criteriaHandler = (e, criteria) => {
+    const onCriteriaHandler = (e, criteria) => {
         e.preventDefault();
 
         let result = "";
@@ -69,7 +69,7 @@ export const RecipeList = ({ isProfile }) => {
 
                     <div className="container">
 
-                        <RecipeSearch criteriaHandler={criteriaHandler} searchParamsHandler={searchParamsHandler} />
+                        <RecipeSearch onCriteriaHandler={onCriteriaHandler} onSearchParamsHandler={onSearchParamsHandler} />
 
                         <div className={style["recipe-data"]}>
                             {paginationRecipe.length > 0 ?
