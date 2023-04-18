@@ -90,11 +90,11 @@ export const RecipeAction = ({ isEdit }) => {
                             title={'Ingredients'}
                             type={'text'}
                             name={'ingredients'}
-                            placeholder={'2 avocados, 1 banana..'}
+                            placeholder={'avocado - 2\nbanana - 1...'}
                             value={formValues.ingredients}
                             handler={onChangeHandler}
                             error={errors}
-                            info={'Separate them with comma and space'}
+                            info={'Separate every ingredients with new line'}
                         />
                         <Input
                             title={'Preparation'}

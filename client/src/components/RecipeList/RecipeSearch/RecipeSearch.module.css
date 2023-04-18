@@ -16,7 +16,7 @@
     background: #f1f1f1;
     max-width:500px;
     position: absolute;
-    right: 55px;
+    right: 9%;
   }
   .search-bar input::placeholder {
     font-size: 16px;
@@ -33,7 +33,7 @@
     border-left: none;
     cursor: pointer;
     position: absolute;
-    right: 55px;
+    right: 9%;
   
   }
 
@@ -48,7 +48,7 @@
     text-align: center;
     padding-top: 30px;
     position: absolute;
-    right: 55px;
+    right: 9%;
   }
   
   .sorting-items button {

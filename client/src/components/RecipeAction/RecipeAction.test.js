@@ -22,7 +22,7 @@ describe("Loads and display Recipe action component", () => {
         expect(queryByPlaceholderText("Preparation time in minutes")).toBeTruthy();
         expect(queryByPlaceholderText("Cooking time in minutes")).toBeTruthy();
         expect(queryByPlaceholderText("3")).toBeTruthy();
-        expect(queryByPlaceholderText("2 avocados, 1 banana..")).toBeTruthy();
+        expect(queryByPlaceholderText(/avocado/i)).toBeTruthy();
         expect(queryByPlaceholderText(/First step./i)).toBeTruthy();
         expect(queryByPlaceholderText("https://...")).toBeTruthy();
         expect(queryByPlaceholderText("https://youtube.com/...")).toBeTruthy();

@@ -79,7 +79,7 @@ export const RecipeDetails = () => {
                                         <h3> Ingredients</h3>
                                         <div className={style.ingredients}>
                                             <ul>
-                                                {recipe.ingredients.split(", ").map((ing, i) => <li key={i}>{ing}</li>)}
+                                                {recipe.ingredients.split("\n").map((ing, i) => <li key={i}>{ing}</li>)}
                                             </ul>
                                         </div>
                                     </div>

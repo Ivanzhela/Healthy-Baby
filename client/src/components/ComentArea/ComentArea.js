@@ -50,7 +50,7 @@ export const ComentArea = ({ recipe, onCommentHandler }) => {
         <div className={style["users-container"]}>
             <div className={style["creator-details"]}>
                 <Link to={`/profile/${recipe.owner._id}`}>
-                    <Profilepic />
+                    <Profilepic image={recipe.owner.profilePic}/>
                 </Link>
                 <div>
                     <p>{recipe.owner.username}</p>
