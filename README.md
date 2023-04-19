@@ -17,6 +17,7 @@
 
 * All guests and users have access to see all recipes and their details.
 * All users and guests can search recipes by name, ingredients or by match in preparation.
+* All users and guests can filter recipes by age, meal time or ingredients.
 * All users and guests can see users' profiles and their recipes.
 * All users and guests can sort recipes.
 * All users can create recipes.
