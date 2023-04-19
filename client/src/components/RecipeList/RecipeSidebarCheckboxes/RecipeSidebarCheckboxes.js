@@ -20,13 +20,11 @@ export const RecipeSidebarCheckboxes = ({ recipe, onFilterCheckboxHandler }) => 
             "First Foods": 0,
             "6-9 Months": 0,
             "9-12 Months": 0,
-            "12-18 Months": 0,
-            "18+ Months": 0,
+            "12-18 Months": 0
         },
         mealTime: {
             Breakfast: 0,
             Brunch: 0,
-            Snack: 0,
             "Main Meals": 0,
             "Light Meals": 0,
             Dessert: 0

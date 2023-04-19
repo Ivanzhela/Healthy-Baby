@@ -131,7 +131,7 @@ export const RecipeAction = ({ isEdit }) => {
                             <label for="age">Age:</label>
                             <select name="age" id="age" onChange={onChangeHandler} value={formValues.age}>
                                 <option value="">Select</option>
-                                <option value="First Food">First Food</option>
+                                <option value="First Foods">First Foods</option>
                                 <option value="6-9 Months">6-9 Months</option>
                                 <option value="9-12 Months">9-12 Months</option>
                                 <option value="12-18 Months">12-18 Months</option>
@@ -141,7 +141,7 @@ export const RecipeAction = ({ isEdit }) => {
                             <select name="mealTime" id="mealTime" onChange={onChangeHandler} value={formValues.mealTime}>
                                 <option value="">Select</option>
                                 <option value="Breakfast">Breakfast</option>
-                                <option value="Snack">Snack</option>
+                                <option value="Brunch">Brunch</option>
                                 <option value="Main Meals">Main Meals</option>
                                 <option value="Light Meals">Light Meals</option>
                                 <option value="Dessert">Dessert</option>
