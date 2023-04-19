@@ -27,6 +27,7 @@ export const RecipeSidebarCheckboxes = ({ recipe, onFilterCheckboxHandler }) => 
             Breakfast: 0,
             Brunch: 0,
             Snack: 0,
+            "Main Meals": 0,
             "Light Meals": 0,
             Dessert: 0
 
@@ -41,16 +42,24 @@ export const RecipeSidebarCheckboxes = ({ recipe, onFilterCheckboxHandler }) => 
                 filters.mealTime[a.mealTime] += 1;
             };
             if (a.ingredients) {
-                const currIngredients = a.ingredients.split(", ");
+                const currIngredients = a.ingredients.split("\n");
                 currIngredients.map(b => {
-                    if (!filters.ingredients.hasOwnProperty(b)) {
-                        filters.ingredients[b] = 1;
-                    } else {
-                        filters.ingredients[b] += 1;
-                    };
+                    const [ingr, other] = b.split(" - ");
+                    if (ingr !== 'olive oil' && ingr !== 'water') {
+                        if (!filters.ingredients.hasOwnProperty(ingr)) {
+                            filters.ingredients[ingr] = 1;
+                        } else {
+                            filters.ingredients[ingr] += 1;
+                        };
+                    }
                 });
             };
         });
+        const sortedIngredients = Object.entries(filters.ingredients)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 10)
+            .map(x => { return { [x[0]]: x[1] } });
+        filters.ingredients = Object.assign({}, ...sortedIngredients);
 
         setFilterCheckbox(old => ({ ...old, ...filters }))
     }, [recipe]);
@@ -58,6 +67,7 @@ export const RecipeSidebarCheckboxes = ({ recipe, onFilterCheckboxHandler }) => 
     useEffect(() => {
         if (Object.values(checkedFilters).some(x => x.length !== 0)) {
             const recipes = Object.entries(checkedFilters).map(a => {
+    
                 const result = a[1].map(i => {
                     return recipe.filter(r =>
                         r[a[0]].includes(i)

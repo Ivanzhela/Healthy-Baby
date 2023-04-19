@@ -69,7 +69,7 @@
 
 .form-wrapper textarea {
 	background-color: rgb(246, 245, 245);
-	border: 0.1px solid rgb(246, 245, 245);
+	border: 1px solid rgb(232, 231, 231);
 	border-radius: 3px;
 	height: 100px;
 	padding-left: 2px;
@@ -98,4 +98,24 @@
 
 .edit-delete button:hover {
 	box-shadow: none;
+}
+.filters label {
+	font-family: "Indie Flower", cursive;
+	font-weight: bold;
+	font-size: 18px;
+}
+.filters select{
+	border: 1px solid rgb(232, 231, 231);
+	margin-right: 100px;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	font-size: 16px;
+	background-color: rgb(246, 245, 245);
+}
+
+.filters select option {
+	border: none;
+	text-align: center;
+
 }

@@ -22,6 +22,8 @@ export const RecipeAction = ({ isEdit }) => {
         preparation: '',
         image: '',
         video: '',
+        age: '',
+        mealTime: '',
     }, method, recipeId, navigate);
 
     useEffect(() => {
@@ -124,7 +126,29 @@ export const RecipeAction = ({ isEdit }) => {
                             handler={onChangeHandler}
                             error={errors}
                         />
+                        <div className={style.filters}>
 
+                            <label for="age">Age:</label>
+                            <select name="age" id="age" onChange={onChangeHandler} value={formValues.age}>
+                                <option value="">Select</option>
+                                <option value="First Food">First Food</option>
+                                <option value="6-9 Months">6-9 Months</option>
+                                <option value="9-12 Months">9-12 Months</option>
+                                <option value="12-18 Months">12-18 Months</option>
+                            </select>
+                            <p className={style.error}>{errors.age}</p>
+                            <label for="mealTime">MealTime:</label>
+                            <select name="mealTime" id="mealTime" onChange={onChangeHandler} value={formValues.mealTime}>
+                                <option value="">Select</option>
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Snack">Snack</option>
+                                <option value="Main Meals">Main Meals</option>
+                                <option value="Light Meals">Light Meals</option>
+                                <option value="Dessert">Dessert</option>
+                            </select>
+
+                            <p className={style.error}>{errors.mealTime}</p>
+                        </div>
                         <button className={style["action-btn"]} type="submit" id='submit-btn'>{currInfoPage}</button>
                     </form>
                 </div>

@@ -47,6 +47,12 @@ export const errorHandler = (submitValues) => {
     if (submitValues.video?.length > 0 && !submitValues.video?.startsWith('https://www.youtube.com/')) {
         errors.video = 'Video should starts with https://www.youtube.com/ !';
     };
+    if (submitValues?.age === "") {
+        errors.age = 'Select age!';
+    };
+    if (submitValues?.mealTime === "" ) {
+        errors.mealTime = 'Select meal time!';
+    };
 
     return errors;
 };
