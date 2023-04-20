@@ -45,36 +45,38 @@ export const ComentArea = ({ recipe, onCommentHandler }) => {
         };
 
     };
-
+    
     return (
-        <div className={style["users-container"]}>
-            <div className={style["creator-details"]}>
-                <Link to={`/profile/${recipe.owner._id}`}>
-                    <Profilepic image={recipe.owner.profilePic}/>
-                </Link>
-                <div>
-                    <p>{recipe.owner.username}</p>
+        <div className={style.container}>
+            <div className={style["users-container"]}>
+                <div className={style["creator-details"]}>
+                    <Link to={`/profile/${recipe.owner._id}`}>
+                        <Profilepic image={recipe.owner.profilePic} />
+                    </Link>
+                    <div>
+                        <p>{recipe.owner.username}</p>
+                    </div>
                 </div>
+
+                {recipe.comments && (recipe.comments.map((c, i) => <Comment comment={c} recipe={recipe} onAction={onAction} key={i} />))}
+
+                {user.token &&
+                    <div className={style["add-comments"]}>
+                        <form onSubmit={(e) => { returnResponse(e) }}>
+                            <textarea
+                                className={style["comment-textarea"]}
+                                name="comment"
+                                cols="40"
+                                rows="10"
+                                placeholder="Add comment..."
+                                value={formValues.comment}
+                                onChange={onChangeHandler}>
+                            </textarea>
+                            <button type="submit">Post</button>
+                        </form>
+                    </div>
+                }
             </div>
-
-            {recipe.comments && (recipe.comments.map((c, i) => <Comment comment={c} recipe={recipe} onAction={onAction} key={i} />))}
-
-            {user.token &&
-                <div className={style["add-comments"]}>
-                    <form onSubmit={(e) => { returnResponse(e) }}>
-                        <textarea
-                            className={style["comment-textarea"]}
-                            name="comment"
-                            cols="40"
-                            rows="10"
-                            placeholder="Add comment..."
-                            value={formValues.comment}
-                            onChange={onChangeHandler}>
-                        </textarea>
-                        <button type="submit">Post</button>
-                    </form>
-                </div>
-            }
         </div>
     );
 };

@@ -52,11 +52,11 @@ export const RecipeList = ({ isProfile }) => {
 
         let result = "";
         if (criteria === "rated") {
-            result = recipe.slice().sort((a, b) => b.stars.length - a.stars.length);
+            result = paginationRecipe.slice().sort((a, b) => b.stars.length - a.stars.length);
         } else if (criteria === "commented") {
-            result = recipe.slice().sort((a, b) => b.comments.length - a.comments.length);
+            result = paginationRecipe.slice().sort((a, b) => b.comments.length - a.comments.length);
         };
-        setRecipe(result);
+        setPaginationRecipe(result);
     };
 
     const onRecipeOptionHandler = (e, value) => {

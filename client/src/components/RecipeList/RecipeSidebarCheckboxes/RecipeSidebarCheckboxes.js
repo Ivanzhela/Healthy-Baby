@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FilterCheckbox } from './FilterCheckbox';
+import { FilterCheckbox } from './FilterCheckbox/FilterCheckbox';
 import style from './RecipeSidebarCheckboxes.module.css'
 
 export const RecipeSidebarCheckboxes = ({ recipe, onFilterCheckboxHandler }) => {
@@ -49,7 +49,7 @@ export const RecipeSidebarCheckboxes = ({ recipe, onFilterCheckboxHandler }) => 
                         } else {
                             filters.ingredients[ingr] += 1;
                         };
-                    }
+                    };
                 });
             };
         });
@@ -59,7 +59,7 @@ export const RecipeSidebarCheckboxes = ({ recipe, onFilterCheckboxHandler }) => 
             .map(x => { return { [x[0]]: x[1] } });
         filters.ingredients = Object.assign({}, ...sortedIngredients);
 
-        setFilterCheckbox(old => ({ ...old, ...filters }))
+        setFilterCheckbox(old => ({ ...old, ...filters }));
     }, [recipe]);
 
     useEffect(() => {
@@ -91,23 +91,33 @@ export const RecipeSidebarCheckboxes = ({ recipe, onFilterCheckboxHandler }) => 
 
         if (e.target.checked === true) {
             const currCategory = checkedFilters[category];
-            currCategory.push(content)
-            setCheckedFilters(old => ({ ...old, [category]: currCategory }))
+            currCategory.push(content);
+            setCheckedFilters(old => ({ ...old, [category]: currCategory }));
         } else {
             const currCategory = checkedFilters[category];
-            const result = currCategory.filter(x => x !== content)
-            setCheckedFilters(old => ({ ...old, [category]: result }))
+            const result = currCategory.filter(x => x !== content);
+            setCheckedFilters(old => ({ ...old, [category]: result }));
         };
     };
 
     return (
         <form className={style.sidenav} method='post'>
-            {Object.entries(filterCheckbox).map(filter =>
-                <div className={style.filterCategory}>
+            {Object.entries(filterCheckbox).map((filter, i) =>
+                <div className={style.filterCategory} key={`category-${filter[0]}-${i}`}>
+                    
                     <h3>{filter[0] === 'age' ? 'Age' : filter[0] === 'mealTime' ? 'Meal Time' : 'Ingredients'}</h3>
+                    
                     {Object.entries(filter[1])
                         .filter(a => a[1] !== 0)
-                        .map((a, i) => <FilterCheckbox filter={filter[0]} checkbox={a} onFilterCheckboxHandler={returnFilterCheckboxHandler} key={i} />)}
+                        .map((a, i) => 
+                            <FilterCheckbox 
+                                filter={filter[0]} 
+                                checkbox={a} 
+                                onFilterCheckboxHandler={returnFilterCheckboxHandler} 
+                                key={`checkbox-${filter[0]}-${i}`} 
+                            />
+                        )
+                    }
 
                 </div>
             )}

@@ -1,6 +1,10 @@
+.container {
+    border: 2px solid white;
+}
+
 .users-container {
     width: 400px;
-    min-height: 200px;
+    height: 100%;
     border: 25px solid white;
     padding: 15px 15px 0px 15px;
 }

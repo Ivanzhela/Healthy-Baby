@@ -1,4 +1,4 @@
-import style from './RecipeSidebarCheckboxes.module.css';
+import style from '../RecipeSidebarCheckboxes.module.css';
 
 export const FilterCheckbox = ({ filter, checkbox, onFilterCheckboxHandler }) => {
 
@@ -8,5 +8,5 @@ export const FilterCheckbox = ({ filter, checkbox, onFilterCheckboxHandler }) =>
             <span className={style.checkmark}></span>
             <span className={style.count}>({checkbox[1]})</span>
         </label>
-    )
-}
+    );
+};

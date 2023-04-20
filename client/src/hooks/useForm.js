@@ -20,7 +20,6 @@ export const useForm = (initialValues, action, params, nav, isAuth) => {
 
         const errors = errorHandler(formValues);
         setError(errors);
-        console.log(errors);
 
         if (Object.values(errors).length === 0) {
 

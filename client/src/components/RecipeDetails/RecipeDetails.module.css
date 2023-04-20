@@ -17,6 +17,11 @@
     display: flex;
 }
 
+.stars p {
+    padding-left: 5px;
+    font-size: 18px;
+}
+
 .stars img {
     width: 25px;
     height: 25px;

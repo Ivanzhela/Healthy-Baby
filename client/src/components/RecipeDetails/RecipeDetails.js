@@ -59,7 +59,7 @@ export const RecipeDetails = () => {
                                 <h1>{recipe.name}</h1>
                                 <div className={style.stars}>
                                     <img src="/images/star-icon.png" alt="stars" />
-                                    <p style={{ fontSize: "15px" }}> {recipe.stars.length || 0}</p>
+                                    <p> {recipe.stars.length || 0}</p>
                                 </div>
                             </div>
 

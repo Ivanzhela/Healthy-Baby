@@ -2,7 +2,7 @@
     height: 550px;
     margin-top: 125px;
     margin-right: 40px;
-    border: 3px solid rgba(110, 223, 184, 0.34); 
+    border: 3px solid #5ec5986b; 
 }
 .profile-data {
     padding: 20px;
@@ -40,7 +40,7 @@
     border: none;
     font-size: 20px;
     font-family: "Indie Flower";
-    background-color: #82c9b2a8;
+    background-color: #5ec5988d;
     margin-top: 10px;
 }
 
