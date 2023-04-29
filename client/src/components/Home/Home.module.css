@@ -2,24 +2,24 @@
     display: flex;
     justify-content: flex-start;
     height: 500px;
-    margin-top: 4.95%;
+    min-height: 10px;
     width: 100%;
     background-color: #b7e9cbd2;
 }
 
 .welcome-text {
-    width: 600px;
+    max-width: 30%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     position: fixed;
-    right: 150px;
-    top: 300px;
+    right: 9%;
+    top: 40%;
 }
 
-.welcome-text h1 {
-    font-size: 50px;
+.welcome-text h1,h2 {
+    font-size: 4vw;
     margin: 0px;
     color: black;
     font-weight: 100;
@@ -28,7 +28,7 @@
 .welcome-text p {
     color: black;
     text-align: end;
-    width: 460px;
+    max-width: 460px;
 }
 
 .welcome-text a {
@@ -40,16 +40,67 @@
 
 h1.bold-welcome {
     font-weight: 900;
-    font-size: 80px;
+    font-size: 5vw;
     font-family: "Indie Flower", cursive;
 }
 
 .welcome-image {
-    width: 1000px;
+    width: 65%;
     position: relative;
     top: 5px;
 }
 
 .welcome-image img {
     width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .welcome {
+        position: relative;
+        width: 100%;
+        height: 450px;
+    }
+    .welcome-image {
+
+        width: 100%;
+        top: auto;
+        left: -40px;
+        bottom: -50px;
+        position: absolute;
+
+    }
+
+    .welcome-text {
+        display: block;
+        max-width: 100%;
+        width: 90%;
+        height: 100%;
+        text-align: center;
+        top: 20px;
+        margin: 25px;
+        position:absolute;
+        right: 0;
+        z-index: 100;
+    }
+
+    .welcome-text h2 {
+        display: block;
+        font-size: 40px;
+    }
+
+    .welcome-text h1 {
+        display: block;
+        font-size: 50px;
+        justify-content: center;
+        width: 100%;
+        top: 0px;
+    }
+
+    .welcome-text a, p {
+        display: flex;
+        width: 90%;
+        justify-content: flex-end;
+        float: right;
+    }
+
 }
