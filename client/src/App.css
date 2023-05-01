@@ -37,8 +37,20 @@ button {
     cursor: pointer;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 @media screen and (max-width: 600px) {
     main .container {
         width: 100%;
+        text-align: center;
+    }
+    main {
+        display: block;
     }
 }

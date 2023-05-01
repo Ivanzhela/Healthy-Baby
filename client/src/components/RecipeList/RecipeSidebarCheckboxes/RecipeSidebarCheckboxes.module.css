@@ -86,7 +86,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .sidenav {
+  /* .sidenav {
     display: none;
-  }
+  } */
 }

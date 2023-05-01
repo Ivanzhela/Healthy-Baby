@@ -47,7 +47,7 @@ export const Header = () => {
                                 <>
                                     <li>
                                         <Link to="/create">
-                                            <i>Add Recipe</i>
+                                        <img src="/images/add-recipe.png" className={style['add-recipe']}></img>
                                         </Link>
                                     </li>
                                     <li>

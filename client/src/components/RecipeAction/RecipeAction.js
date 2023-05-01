@@ -49,6 +49,9 @@ export const RecipeAction = ({ isEdit }) => {
             :
             <>
                 <div className={style['form-wrapper']}>
+                    <div className={style['corner-wrapper']}>
+                        <div className={style.corner}></div>
+                    </div>
                     <h2>{currInfoPage}</h2>
 
                     <form method="post" onSubmit={onSubmit}>
@@ -128,7 +131,7 @@ export const RecipeAction = ({ isEdit }) => {
                         />
                         <div className={style.filters}>
 
-                            <label for="age">Age:</label>
+                            <label htmlFor="age">Age:</label>
                             <select name="age" id="age" onChange={onChangeHandler} value={formValues.age}>
                                 <option value="">Select</option>
                                 <option value="First Foods">First Foods</option>
@@ -137,7 +140,7 @@ export const RecipeAction = ({ isEdit }) => {
                                 <option value="12-18 Months">12-18 Months</option>
                             </select>
                             <p className={style.error}>{errors.age}</p>
-                            <label for="mealTime">MealTime:</label>
+                            <label htmlFor="mealTime">MealTime:</label>
                             <select name="mealTime" id="mealTime" onChange={onChangeHandler} value={formValues.mealTime}>
                                 <option value="">Select</option>
                                 <option value="Breakfast">Breakfast</option>

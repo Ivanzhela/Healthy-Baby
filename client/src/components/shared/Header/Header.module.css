@@ -51,7 +51,6 @@
   margin: 0 10px;
   display: flex;
 }
-
 .nav-links ul li a {
   font-size: 22px;
   display: block;
@@ -71,6 +70,12 @@
 .dropbtn img {
   width: 20px;
   height: auto;
+}
+
+.add-recipe {
+  width: 18px;
+  height: auto;
+  margin-top: 5px;
 }
 
 .dropdown {

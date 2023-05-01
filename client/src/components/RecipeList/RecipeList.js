@@ -17,6 +17,7 @@ export const RecipeList = ({ isProfile }) => {
     const [query, setQuery] = useState();
     const [saves, setSaves] = useState(false);
     const [paginationRecipe, setPaginationRecipe] = useState();
+    const [hiddenFilters, setHiddenFilters] = useState(true)
 
     const { userId } = useParams();
     const { user } = useContext(AuthContext);
@@ -73,19 +74,25 @@ export const RecipeList = ({ isProfile }) => {
     const onFilterCheckboxHandler = (newValue) => {
         setFilterRecipes(newValue);
     };
-
+    const onHiddenFilters = (value) => {
+        value === "open" ?
+            setHiddenFilters(false) :
+            setHiddenFilters(true)
+    }
     return (
         <>
             {paginationRecipe === undefined ?
                 <Lodaing />
                 :
-                <>
-                    <RecipeSidebarCheckboxes recipe={recipe} filterRecipes={filterRecipes} onFilterCheckboxHandler={onFilterCheckboxHandler} />
-
+                <div className={style.data} id="container">
+                    <div className={`${style.sidebar} ${hiddenFilters === true ? style.hidden : ''}`}>
+                        <button className={style['close-filters']} onClick={(e) => onHiddenFilters('close')}>X</button>
+                        <RecipeSidebarCheckboxes recipe={recipe} filterRecipes={filterRecipes} onFilterCheckboxHandler={onFilterCheckboxHandler} />
+                    </div>
                     <div className="container">
 
                         <RecipeSearch onCriteriaHandler={onCriteriaHandler} onSearchParamsHandler={onSearchParamsHandler} />
-
+                        <button className={style['open-filters']} onClick={(e) => onHiddenFilters('open')}>Filters</button>
                         <div className={style["recipe-data"]}>
                             {paginationRecipe.length > 0 ?
                                 paginationRecipe.map(recipe => <Recipe paginationRecipe={recipe} key={recipe._id} />) :
@@ -94,12 +101,16 @@ export const RecipeList = ({ isProfile }) => {
                                 </article>
                             }
                         </div>
-
+                        <div className={style.up}>
+                            <a href="#container">
+                                <i class='fas fa-angle-double-up'></i>
+                            </a>
+                        </div>
                         <RecipePagination onPagination={onPagination} length={filterRecipes.length > 0 ? filterRecipes.length : recipe.length} />
                     </div>
 
                     {isProfile && <ProfileCard userId={userId} onRecipeOptionHandler={onRecipeOptionHandler} />}
-                </>
+                </div>
             }
         </>
     );

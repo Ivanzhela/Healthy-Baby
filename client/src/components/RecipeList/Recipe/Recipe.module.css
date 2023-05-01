@@ -1,7 +1,7 @@
 .recipe-card {
     position: relative;
     width: 200px;
-    height: 310px;
+    max-height: 310px;
     margin-right: 10px;
     display: inline-block;
     margin-bottom: 5px;
@@ -29,7 +29,7 @@
 
 h5 {
     font-size: 17px;
-    width: 180px;
+    max-width: 180px;
     height: 50px;
     font-weight: normal;
     display: inline-block;
@@ -80,4 +80,15 @@ h5 {
     font-weight: 500;
     line-height: 1em;
     white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+    .recipe-card {
+        width: 170px;
+    }
+
+    .recipe-card h5 {
+        display: block;
+        text-align: start;
+    }
 }

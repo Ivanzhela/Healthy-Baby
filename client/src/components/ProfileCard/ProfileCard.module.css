@@ -1,9 +1,10 @@
 .card {
     height: 550px;
-    margin-top: 125px;
+    margin-top: 40px;
     margin-right: 40px;
-    border: 3px solid #5ec5986b; 
+    border: 3px solid #5ec5986b;
 }
+
 .profile-data {
     padding: 20px;
     height: 100%;
@@ -45,8 +46,8 @@
 }
 
 .edit-delete-btns {
-    position: relative;
-    left: 130px;
+    position: absolute;
+    right: 100px;
     text-decoration: none;
 }
 
@@ -62,4 +63,32 @@
 .edit-delete-btns img {
     width: 30px;
     margin-left: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        top: 0;
+        height: auto;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .profile-data {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .personal .data {
+        max-width: 110px;
+    }
+
+    .profile_img img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .edit-delete-btns {
+        right: 35px;
+        top: 100px;
+    }
 }

@@ -66,4 +66,12 @@ input:focus {
     width: 80%;
     margin: auto;
   }
+
+  .sorting-items button {
+    margin-left: 10px;
+  }
+
+  .sorting-items {
+    width: 90%;
+  }
 }

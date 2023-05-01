@@ -76,7 +76,7 @@ export const RecipeDetailsCook = ({ recipe, onSocialShareHandler }) => {
                             <p>{saveOptions[socialShareState.save].title}</p>
                         </button>
                         <button disabled={socialShareState.rate} onClick={(e) => onSocialShareHandler(e, 'rateRecipe')}>
-                            <img src="/images/rate-icon.png" alt="Rate" style={{ width: "32px", height: "30px" }} />
+                            <img src={socialShareState.rate === true ? "/images/rated-icon.png" : "/images/rate-icon.png"} alt="Rate" style={{ width: "32px", height: "30px" }} />
                             <p style={{ marginLeft: "5px" }}>Rate</p>
                         </button>
                     </div>
