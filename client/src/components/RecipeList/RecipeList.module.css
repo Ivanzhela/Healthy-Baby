@@ -86,8 +86,8 @@
     bottom: 40px;
   }
   
-  .up i {
+  .up img {
+    width: 30px;
     font-size: 30px;
-    color: #8ed1b1;
   }
 }

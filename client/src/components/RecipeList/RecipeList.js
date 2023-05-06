@@ -103,7 +103,7 @@ export const RecipeList = ({ isProfile }) => {
                         </div>
                         <div className={style.up}>
                             <a href="#container">
-                                <i class='fas fa-angle-double-up'></i>
+                                <img src="/images/up-icon.png" alt="up-icon" />
                             </a>
                         </div>
                         <RecipePagination onPagination={onPagination} length={filterRecipes.length > 0 ? filterRecipes.length : recipe.length} />
