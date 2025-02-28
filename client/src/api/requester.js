@@ -1,6 +1,6 @@
 const baseUrl = process.env.NODE_ENV === 'development'
     ? 'http://localhost:5000'
-    : 'https://dull-ruby-alligator-suit.cyclic.app';
+    : 'https://healthy-baby-server.onrender.com';
 
 async function requester(method, endpoint, data) {
     let options = { method, headers: {} };
